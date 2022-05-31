@@ -1,17 +1,25 @@
 import React from 'react';
 import { Header, Footer, FocusGallery } from "./Components";
 import {makeTiles} from "./common";
+import greed1 from "./assets/sins/greed1.jpg";
+import greed2 from "./assets/sins/greed2.jpg";
+import envy1 from "./assets/sins/envy1.jpg";
+import envy2 from "./assets/sins/envy2.jpg";
+import lust1 from "./assets/sins/lust1.jpg";
+import lust2 from "./assets/sins/lust2.jpg";
+import wrath1 from "./assets/sins/wrath1.jpg";
+import wrath2 from "./assets/sins/wrath2.jpg";
 
 function Sins() {
     let gallery = [
-        {title: "Greed", composition: "Paper Clay, Cardboard, and Paint", src: "sins/greed1.jpg"},
-        {title: "Greed", composition: "Paper Clay, Cardboard, and Paint", src: "sins/greed2.jpg"},
-        {title: "Envy", composition: "Paper Clay, Cardboard, and Paint", src: "sins/envy1.jpg"},
-        {title: "Envy", composition: "Paper Clay, Cardboard, and Paint", src: "sins/envy2.jpg"},
-        {title: "Lust", composition: "Paper Clay, Cardboard, and Paint", src: "sins/lust1.jpg"},
-        {title: "Lust", composition: "Paper Clay, Cardboard, and Paint", src: "sins/lust2.jpg"},
-        {title: "Wrath", composition: "Paper Clay, Cardboard, and Paint", src: "sins/wrath1.jpg"},
-        {title: "Wrath", composition: "Paper Clay, Cardboard, and Paint", src: "sins/wrath2.jpg"},
+        {title: "Greed", composition: "Paper Clay, Cardboard, and Paint", src: greed1},
+        {title: "Greed", composition: "Paper Clay, Cardboard, and Paint", src: greed2},
+        {title: "Envy", composition: "Paper Clay, Cardboard, and Paint", src: envy1},
+        {title: "Envy", composition: "Paper Clay, Cardboard, and Paint", src: envy2},
+        {title: "Lust", composition: "Paper Clay, Cardboard, and Paint", src: lust1},
+        {title: "Lust", composition: "Paper Clay, Cardboard, and Paint", src: lust2},
+        {title: "Wrath", composition: "Paper Clay, Cardboard, and Paint", src: wrath1},
+        {title: "Wrath", composition: "Paper Clay, Cardboard, and Paint", src: wrath2},
     ];
     return (
         <div>
