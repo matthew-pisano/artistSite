@@ -1,13 +1,89 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1a1a1a;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.circle {
+    background-color:#c1cebc;
+    border:5px solid rgb(0, 0, 0);    
+    height:125px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:125px;
+    font-size: 25px;
+}
+.centered {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.hoverBlur:hover {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+.hoverBlur:hover ~ .hoverLabel{
+    visibility: visible;
+}
+.hoverLabel{
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+}
+.galleryButton{
+    background-color: rgba(41, 41, 41, 0.8); 
+    color: whitesmoke; 
+    text-align: center; 
+    font-size: 40px;
+    height: 100%;
+    vertical-align: middle;
+}
+.cardHolder{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.cellHolder{
+    width: 800px;
+    background-color: #aac79f;
+}
+.cellText{
+    vertical-align: top;
+}
+.cellHolder img {
+    object-fit: cover;
+    height: 800px;
+    width: 100%;
+}
+#headLinks{
+    width: 500px;
+    margin: auto;
+}
+@media (max-width: 1300px) {
+    .cellHolder, .cellText{
+        width: 100%;
+        display: block;
+    }
+}
+@media (max-width: 800px) {
+    #headLinks{
+        width: 300px;
+    }
 }
