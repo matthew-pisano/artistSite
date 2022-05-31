@@ -1,0 +1,28 @@
+.circle {
+    background-color:#c1cebc;
+    border:5px solid rgb(0, 0, 0);    
+    height:100px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:100px;
+}
+.centered {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.hoverBlur:hover {
+    webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+.hoverBlur:hover ~ .hoverLabel{
+    visibility: visible;
+}
+.hoverLabel{
+    visibility: hidden;
+    pointer-events: none;
+}
