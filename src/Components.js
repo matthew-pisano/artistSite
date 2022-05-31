@@ -5,6 +5,7 @@ import {focusImage, selectedCard} from "./common";
 let links = [
     {title: "Home", path: "/"},
     {title: "Ghost Exhibition", path: "/ghost"},
+    {title: "Sins", path: "/sins"},
     {title: "Sculpture", path: "/sculpture"},
     {title: "Painting", path: "/painting"},
     {title: "Drawing", path: "/drawing"},
@@ -16,12 +17,15 @@ function unFocusImage(){
     document.getElementById("focusedContent").style.display = "none";
 }
 function prevCard(){
+    //document.getElementById("mainContent").parentElement
     if(selectedCard.previousElementSibling !== null)
         focusImage(selectedCard.previousElementSibling.id);
+    else focusImage(selectedCard.parentElement.children[selectedCard.parentElement.children.length-1].id);
 }
 function nextCard(){
     if(selectedCard.nextElementSibling !== null)
         focusImage(selectedCard.nextElementSibling.id);
+    else focusImage(selectedCard.parentElement.children[0].id);
 }
 
 function Header(){
@@ -76,24 +80,25 @@ function FocusGallery(){
     return (
         <div id="focusedContent" style={{width: "100%", display: "none", backgroundColor: "#8ea685"}}>
             <div className="w3-row w3-display-container" style={{width: "100%"}}>
-                <button className="w3-button" style={{float: "right", fontSize: "40px"}} 
+                <button className="w3-button" style={{float: "right", fontSize: "40px", fontWeight: "lighter"}} 
                 onClick={() => unFocusImage()}>X</button>
             </div>
-            <div className="w3-cell-row">
-                <button className="w3-button w3-cell galleryButton" onClick={() => prevCard()}>&lt;</button>
-                <div className="w3-cell w3-display-container" style={{backgroundColor: "red"}/*{marginLeft: "10%", marginRight: "10%", marginBottom: "10%"}*/}>
-                    <img id="focusedImage" className="w3-half" style={{borderStyle: "double", borderWidth: "10px", borderColor: "whitesmoke", display: "none"}} alt=''/>
-                    <span id="focusedText" className="w3-half" style={{paddingLeft: "5%", backgroundColor: "rgba(41, 41, 41, 0.8)", 
-                        color: "whitesmoke", textAlign: "center", fontSize: "30px", borderStyle: "double", borderWidth: "10px 0px", borderColor: "whitesmoke", display: "none"}}></span>
+            <div className="w3-cell-row" style={{height: "100%"}}>
+                <div id="leftGalHolder" className="w3-cell" style={{height: "100%", verticalAlign: "middle"}}>
+                    <button id="leftGalButton" className="w3-button galleryButton" onClick={() => prevCard()}>&lt;</button>
                 </div>
-                <button className="w3-button w3-cell galleryButton" onClick={() => nextCard()}>&gt;</button>
+                <div id="galleryImg" className="w3-cell">
+                    <img id="focusedImage" style={{borderStyle: "double", borderWidth: "10px", borderColor: "whitesmoke"}} alt=''/>
+                </div>
+                <div id="rightGalHolder" className="w3-cell" style={{height: "100%", verticalAlign: "middle"}}>
+                    <button id="rightGalButton" className="w3-button galleryButton" onClick={() => nextCard()}>&gt;</button>
+                </div>
+                <div id="galleryTextHolder" className="w3-cell">
+                    <div id="galleryText">
+                        <p id="focusedText" style={{paddingLeft: "5%", textAlign: "center"}}></p>
+                    </div>
+                </div>
             </div>
-            {/*<div className="w3-row w3-display-container" style={{width: "100%"}}>
-                <button className="w3-button w3-half galleryButton"
-                onClick={() => prevCard()}>&lt;</button>
-                <button className="w3-button w3-half galleryButton"
-                onClick={() => nextCard()}>&gt;</button>
-            </div>*/}
         </div>
     );
 }

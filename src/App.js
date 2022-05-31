@@ -7,6 +7,7 @@ import Sculpture from './Sculpture';
 import Painting from './Painting';
 import Drawing from './Drawing';
 import Bio from './Bio';
+import Sins from './sins';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/sculpture" element={<Sculpture/>} />
                 <Route path="/painting" element={<Painting/>} />
                 <Route path="/drawing" element={<Drawing/>} />
+                <Route path="/sins" element={<Sins/>} />
                 <Route path="/bio" element={<Bio/>} />
             </Routes>
         </Router>
