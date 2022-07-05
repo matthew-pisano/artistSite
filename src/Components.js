@@ -9,6 +9,9 @@ let links = [
     {title: "Sculpture", path: "/sculpture"},
     {title: "Painting", path: "/painting"},
     {title: "Drawing", path: "/drawing"},
+    {title: "Figure Drawings", path: "/figure"},
+    {title: "Still Lives", path: "/stills"},
+    {title: "Exhibitions", path: "/exhibitions"},
     {title: "Bio", path: "/bio"},
 ];
 
